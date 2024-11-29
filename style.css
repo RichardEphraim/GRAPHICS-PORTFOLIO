@@ -31,14 +31,14 @@ padding: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid white; */
-    padding-top: 100px;
+    padding-top: 16rem;
+    padding-bottom: 3rem;
     position: relative;
     z-index: 2;
 }
 h1{
     color: white;
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 0;
     font-family: "Average Sans";
     font-weight: 100;
@@ -46,51 +46,107 @@ h1{
 h3{
     color:aqua ;
     font-family: 'eater';
-    font-weight: 100;
     margin: 0;
-    font-size: 25px;
+    font-size: 2rem;
 }
 .grid-projects{
     margin: 0;
-    border: 2px solid rgb(255, 255, 255);
-    height: 900px;
+    height: 45rem;
     padding: 15px 150px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
 }
 .grid-projects div{
-    width: 18rem;
-    height: 17rem;
-    border: 1px solid white;
-    margin-inline: 5px;
+    position: relative;
+    width: 20rem;
+    height: 20.5rem;
+    margin: 10px;
     align-content:end;
     justify-items: center;
     background-image: url(images/backimg.jpeg);
     background-size: cover;
 
 }
-.grid-projects div div{
+#box-content{
+    position: absolute;
     background-color:  rgb(0, 128, 0, 0.5);
     height: 100%;
     background-image: none;
     width: 100%;
     justify-content: center;
     align-content: end;
+    top: 0;
+    margin: 0;
+    z-index: 1;
 }
-.grid-projects div div:hover {
-      height: 30%;
-      background-color: green;
-      transition: 1s;
+#box-content:hover{
+    background-color: transparent;
+}
+#text-content{
+    top: 0;
+    margin: 0;
+    position: absolute;
+    background: green;
+    height: 25%;
+    width: 100%;
+    z-index: 2;
+    align-content: center;
+    justify-items: center;
+}
 
-}
-.box-content h1{
+#text-content h1{
 font-size: 15px;
 font-weight: bold;
 }
-.box-content p{
+#text-content p{
     margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/* home boxes color for eaach */
+.grid-projects > div:nth-child(1) #box-content {
+    background: rgb(0, 128, 0, 0.5);
+}
+.grid-projects > div:nth-child(1) #text-content {
+    background: rgb(0, 128, 0,);
+}
+.grid-projects > div:nth-child(2) #box-content{
+    background: rgba(11, 11, 112, 0.5);
+}
+.grid-projects > div:nth-child(2) #text-content{
+    background: rgb(11, 11, 112);
+}
+.grid-projects > div:nth-child(3) #box-content{
+    background: rgb(32, 178, 170, 0.5);
+}
+.grid-projects > div:nth-child(3) #text-content{
+    background: rgb(32, 178, 170);
+}
+.grid-projects > div:nth-child(4) #box-content{
+    background: rgba(178, 34, 34, 0.5);
+}
+.grid-projects > div:nth-child(4) #text-content{
+    background: rgb(178, 34, 34);
+}
+.grid-projects > div:nth-child(5) #box-content{
+    background: rgb(240, 128, 128, 0.5);
+}
+.grid-projects > div:nth-child(5) #text-content{
+    background: rgb(240, 128, 128);
+}
+.grid-projects > div:nth-child(6) #box-content{
+    background: rgb(128, 0, 128, 0.5);
+}
+.grid-projects > div:nth-child(6) #text-content{
+    background: rgb(128, 0, 128);
 }
 
