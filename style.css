@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Eater&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 
@@ -32,8 +32,9 @@ padding: 0;
     align-items: center;
     justify-content: center;
     padding-top: 16rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
     position: relative;
+    line-height: 4.5rem;
     z-index: 2;
 }
 h1{
@@ -41,13 +42,14 @@ h1{
     font-size: 5rem;
     margin: 0;
     font-family: "Average Sans";
-    font-weight: 100;
+    font-weight: lighter;
 }
 h3{
     color:aqua ;
-    font-family: 'eater';
+    font-family: "Alumni Sans Pinstripe", sans-serif;
     margin: 0;
-    font-size: 2rem;
+    font-size: 5rem;
+    font-weight: lighter;
 }
 .grid-projects{
     margin: 0;
@@ -82,9 +84,10 @@ h3{
     margin: 0;
     z-index: 1;
 }
-#box-content:hover{
+.grid-projects div #box-content:hover{
     background-color: transparent;
 }
+
 #text-content{
     top: 0;
     margin: 0;
@@ -93,16 +96,75 @@ h3{
     height: 25%;
     width: 100%;
     z-index: 2;
-    align-content: center;
-    justify-items: center;
+   justify-content: center;
+   align-items: center;
 }
 
 #text-content h1{
-font-size: 15px;
+font-size: 18px;
 font-weight: bold;
+font-family: 'Average sans';
 }
 #text-content p{
     margin-top: 0;
+    color: white;
+    font-family: 'Average sans';
+    font-size: 15px;
+}
+
+.home-footer{
+    position: relative;
+    align-items: center;  
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    height: 40rem;  
+    color: white;
+}
+.email-btn{
+    width: 12.5rem;
+    height: 3.5rem;
+    background-color: rgb(131, 213, 242);
+    border: none;
+    font-size: 16px;
+    margin-bottom: 3rem;
+}
+
+.footer-text{
+    background-color: rgb(112, 194, 224, 0.8);
+    height: 70%;
+    width: 100%;
+}
+.footer-text p{
+    margin-inline: 10rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    line-height: 2.5rem;
+}
+.copyright{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(0, 107, 145, 0.7);
+    align-content: center;
+    justify-items: center;
+}
+.more-about a{
+    text-decoration: none;
+    color:  rgb(0, 107, 145);
+    font-weight: bold;
+}
+.icon{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 2rem;
+}
+.icon i{
+    margin-inline: 1rem;
+    font-size: 2rem;
+    color: rgb(0, 107, 145);
 }
 
 
