@@ -68,7 +68,6 @@ h3{
     margin: 10px;
     align-content:end;
     justify-items: center;
-    background-image: url(images/backimg.jpeg);
     background-size: cover;
 
 }
@@ -84,7 +83,7 @@ h3{
     margin: 0;
     z-index: 1;
 }
-.grid-projects div #box-content:hover{
+.boxes{
     background-color: transparent;
 }
 
@@ -176,39 +175,90 @@ font-family: 'Average sans';
 
 /* home boxes color for eaach */
 .grid-projects > div:nth-child(1) #box-content {
-    background: rgb(0, 128, 0, 0.5);
+    background: rgb(0, 128, 0, 0.5) ;
+}
+.grid-projects > div:nth-child(1)  {
+    background-image: url(images/1.jpg) ;
+}
+.grid-projects > div:nth-child(1) #box-content:hover {
+    background: transparent;
 }
 .grid-projects > div:nth-child(1) #text-content {
-    background: rgb(0, 128, 0,);
+    background: rgb(0, 128, 0, 0.9);
 }
+
+
+
 .grid-projects > div:nth-child(2) #box-content{
     background: rgba(11, 11, 112, 0.5);
 }
-.grid-projects > div:nth-child(2) #text-content{
-    background: rgb(11, 11, 112);
+.grid-projects > div:nth-child(2)  {
+    background-image: url(images/2.jpg) ;
 }
+.grid-projects > div:nth-child(2) #box-content:hover {
+    background: transparent;
+}
+.grid-projects > div:nth-child(2) #text-content{
+    background: rgb(11, 11, 112, 0.9);
+}
+
+
+
 .grid-projects > div:nth-child(3) #box-content{
     background: rgb(32, 178, 170, 0.5);
 }
-.grid-projects > div:nth-child(3) #text-content{
-    background: rgb(32, 178, 170);
+.grid-projects > div:nth-child(3)  {
+    background-image: url(images/3.jpg) ;
 }
+.grid-projects > div:nth-child(3) #box-content:hover {
+    background: transparent;
+}
+.grid-projects > div:nth-child(3) #text-content{
+    background: rgb(32, 178, 170, 0.9);
+}
+
+
+
 .grid-projects > div:nth-child(4) #box-content{
-    background: rgba(178, 34, 34, 0.5);
+    background: rgba(178, 34, 34, 0.5);   
+}
+.grid-projects > div:nth-child(4)  {
+    background-image: url(images/4.jpg) ;
+}
+.grid-projects > div:nth-child(4) #box-content:hover {
+    background: transparent;
 }
 .grid-projects > div:nth-child(4) #text-content{
-    background: rgb(178, 34, 34);
+    background: rgb(178, 34, 34, 0.9);
 }
+
+
+
 .grid-projects > div:nth-child(5) #box-content{
     background: rgb(240, 128, 128, 0.5);
 }
-.grid-projects > div:nth-child(5) #text-content{
-    background: rgb(240, 128, 128);
+.grid-projects > div:nth-child(5)  {
+    background-image: url(images/5.jpg) ;
 }
+.grid-projects > div:nth-child(5) #box-content:hover {
+    background: transparent;
+}
+.grid-projects > div:nth-child(5) #text-content{
+    background: rgb(240, 128, 128, 0.9);
+}
+
+
+
 .grid-projects > div:nth-child(6) #box-content{
     background: rgb(128, 0, 128, 0.5);
 }
+.grid-projects > div:nth-child(6)  {
+    background-image: url(images/6.jpg) ;
+}
+.grid-projects > div:nth-child(6) #box-content:hover {
+    background: transparent;
+}
 .grid-projects > div:nth-child(6) #text-content{
-    background: rgb(128, 0, 128);
+    background: rgb(128, 0, 128, 0.9);
 }
 
