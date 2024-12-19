@@ -7,28 +7,57 @@
     <link rel="stylesheet" href="testing.css">
 </head>
 <body>
-    <div class="slideshow">
-        <div class="slideshow-item">
-            <img src="images/1.jpg" alt="" />
+    <div>
+        <div class="overlay"></div>
+        <div class="name-tag">
+            <h2>MAKINDE AYOMIDE</h2>
+            <h3>Graphic Designer</h3>
+        </div>
+        <div class="intro-head">
+            <h2>WEB & DIGITAL DESIGNS</h2>
+            <h3>UI/UX</h3>
+        </div>
+        
+        <!-- Slide Show -->
+        <div class="slideshow">
+            <div class="slideshow-item">
+                <img src="images/1.jpg" alt="" />
                 <div class="slideshow-item-text">
                     <h5>Welcome</h5>
                     <p>This is an open access book portal</p>
+                    <button class="view-image-btn">View Image</button>
                 </div>
-        </div><div class="slideshow-item">
-            <img src="images/2.jpg" alt="" />
+            </div>
+            <div class="slideshow-item">
+                <img src="images/2.jpg" alt="" />
                 <div class="slideshow-item-text">
                     <h5>Bem-vindos</h5>
                     <p>Este é um portal de livros em acesso aberto</p>
+                    <button class="view-image-btn">View Image</button>
                 </div>
-        </div>
-        <div class="slideshow-item">
-            <img src="images/3.jpg" alt="" />
+            </div>
+            <div class="slideshow-item">
+                <img src="images/3.jpg" alt="" />
                 <div class="slideshow-item-text">
                     <h5>Bienvenidos</h5>
                     <p>Este es un portal de libros en acceso abierto</p>
+                    <button class="view-image-btn">View Image</button>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Modal Structure -->
+        <div class="image-modal">
+            <div class="modal-content">
+                <!-- Image will be dynamically injected here -->
+            </div>
+            <div class="modal-nav prev">&lt;</div> <!-- Previous Button -->
+            <div class="modal-nav next">&gt;</div> <!-- Next Button -->
+            <div class="close-modal">X</div>
         </div>
         
     </div>
+
+    <script src="testing.js"></script>
 </body>
 </html>

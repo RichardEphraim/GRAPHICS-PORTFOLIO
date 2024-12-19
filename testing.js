@@ -1,7 +1,4 @@
-
-
-// Get all "View Image" buttons
-const viewImageButtons = document.querySelectorAll('.view-image-btn');
+const slideshowItems = document.querySelectorAll('.slideshow-item img');
 const modal = document.querySelector('.image-modal');
 const modalContent = document.querySelector('.modal-content');
 const closeModal = document.querySelector('.close-modal');
@@ -10,9 +7,9 @@ const nextButton = document.querySelector('.modal-nav.next');
 
 let currentIndex = 0;
 
-// Open modal when the "View Image" button is clicked
-viewImageButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
+// Open modal and set the current image
+slideshowItems.forEach((img, index) => {
+    img.addEventListener('click', () => {
         currentIndex = index;
         showImage();
         modal.style.display = 'flex';
@@ -24,10 +21,10 @@ closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Show image in the modal based on current index
+// Show image based on current index
 function showImage() {
     modalContent.innerHTML = `
-        <img src="${slideshowItems[currentIndex].querySelector('img').src}" alt="Slide ${currentIndex + 1}" />
+        <img src="${slideshowItems[currentIndex].src}" alt="Slide ${currentIndex + 1}" />
     `;
 }
 
