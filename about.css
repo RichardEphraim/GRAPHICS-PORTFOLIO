@@ -143,6 +143,9 @@ body{
 
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
+    *{
+        overflow-x: hidden;
+    }
     
     .name-tag h2 {
         font-size: 18px;
@@ -173,14 +176,14 @@ body{
         height: 30%;
         z-index: 5;
         top: 0;
-        margin-bottom: 0.5rem;
         
     }
 
     .text-box {
-        padding: 1rem;
-        font-size: 12px;
-        width: 90vw;
+        height: 70%;
+        padding: 2px;
+        width: 96vw;
+        font-size: 11px;
     }
 
     .contact {
