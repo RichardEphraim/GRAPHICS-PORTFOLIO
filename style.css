@@ -134,8 +134,9 @@ color: white;
     height: 3.5rem;
     background-color: rgb(131, 213, 242);
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 3rem;
+    font-family: average sans;
 }
 
 .footer-text{
