@@ -99,14 +99,11 @@ h3{
    align-items: center;
    
 }
-#text-content h1 a{
-    text-decoration: none;
-    color: white;
-}
+
 #text-content h1 a:hover{
     color: rgb(203, 199, 199);
 }
-#text-content h1 { 
+#text-content a { 
 text-decoration: none;
 font-size: 1rem;
 font-weight: bold;
@@ -237,9 +234,11 @@ color: white;
 
 /* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-    .heading {
+   
+    /* .heading {
         padding-top: 10rem;
         padding-bottom: 3rem;
+        height: 0.5rem;
     }
 
     h1 {
@@ -262,10 +261,19 @@ color: white;
     .grid-projects div {
         width: 100%;
         min-height: 20rem;
+        border: 2px solid white;
+        margin-bottom: 1rem;
     }
 
     #text-content {
         min-height: 25%;
+    }
+    #text-content a{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    #text-content p{
+        font-size: 10rem;
     }
 
    
@@ -283,54 +291,96 @@ color: white;
     }
     .footer-text{
         
-    }
+    } */
 }
 
 /* Mobile Phones (max-width: 480px) */
 @media (max-width: 480px) {
     .heading {
         padding-top: 8rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
+        justify-content: end;
+        height: 6rem;
+    }
+    .heading hr{
+        width: 20px;
+        align-content: left;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         line-height: 2.5rem;
+        text-align: center;
     }
 
     h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 2rem;
+        font-weight: bold;
+    }
+    .grid-projects{
+        grid-template-columns: repeat(1, 1fr);
+        padding-block: 0px;
+        padding-inline: 20px;
+        align-items: center;
+        height: 130rem;
+        margin: 0;
+
     }
 
     .grid-projects div {
         width: 100%;
-        height: 14rem;
-        margin: 10px 0;
+        height: 20rem;
+        margin: 0px;
     }
 
     #text-content {
-        height: 20%;
+        height: 22%;
     }
 
-    #text-content h1 {
-        font-size: 12px;
+    #text-content a{
+        font-size: 15px;  
     }
 
     #text-content p {
-        font-size: 10px;
+        font-size: 13px;
+    }
+    .home-footer h2{
+        font-size: 1rem;
     }
 
     .email-btn {
         width: 8rem;
         height: 2.2rem;
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    .home-footer{
+        height:24rem ;
+        padding: 0px;
+    }
+    .footer-text{
+        padding: 20px 0px 20px 0px;
+        height: 15rem;
     }
 
     .footer-text p {
         margin-inline: 1.5rem;
-        font-size: 14px;
+        margin-top: 5px;
+        font-size: 13px;
         line-height: 1.5rem;
+        text-align: justify;
+    }
+    .icon{
+        height: 1rem;
+        margin: 0;
+    }
+    .icon i{
+        font-size: 1.5rem;
+    }
+    .copyright{
+        font-size: 0.7rem;
     }
 }
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invisible Outline Div</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right, #f3e5ab, #ffb6c1);
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* Div with completely removed outline */
+    .no-outline {
+      width: 200px;
+      height: 100px;
+      outline: none;
+      background: #ff7f50;
+      border-radius: 10px;
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Div with outline matching the background */
+    .match-bg-outline {
+      width: 200px;
+      height: 100px;
+      background: #87ceeb;
+      outline: 2px solid #f3e5ab; /* Matches the body background */
+      border-radius: 10px;
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Div with transparent outline */
+    .transparent-outline {
+      width: 200px;
+      height: 100px;
+      background: #9370db;
+      outline: 2px solid transparent;
+      border-radius: 10px;
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Div with gradient background matching the outline */
+    .gradient-outline {
+      width: 200px;
+      height: 100px;
+      background: linear-gradient(to right, #ff4500, #ff6347);
+      border-radius: 10px;
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Div with shadow instead of outline */
+    .shadow-effect {
+      width: 200px;
+      height: 100px;
+      background: #32cd32;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Div with pushed-out outline */
+    .offset-outline {
+      width: 200px;
+      height: 100px;
+      background: #1e90ff;
+      outline: 2px solid black;
+      outline-offset: -9999px; /* Pushes outline out of view */
+      border-radius: 10px;
+      color: white;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="no-outline">No Outline</div>
+    <div class="match-bg-outline">Match BG Outline</div>
+    <div class="transparent-outline">Transparent Outline</div>
+    <div class="gradient-outline">Gradient BG</div>
+    <div class="shadow-effect">Shadow Effect</div>
+    <div class="offset-outline">Offset Outline</div>
+  </div>
+</body>
+</html>
