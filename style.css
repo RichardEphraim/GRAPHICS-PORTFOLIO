@@ -233,6 +233,9 @@ color: white;
         font-size: 18px;
         line-height: 2rem;
     }
+    .footer-text{
+        height:18rem ;
+    }
 }
 
 
