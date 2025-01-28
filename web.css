@@ -481,6 +481,9 @@ body{
         height: 3rem;
         font-size: 0.9rem;
     }
+    .name-tag-footer{
+        font-size: 14px;
+    }
 }
 
 /* Tablet Styles (768px - 1024px) */
