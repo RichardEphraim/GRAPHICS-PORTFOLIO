@@ -452,6 +452,8 @@ body{
         padding: 2rem;
         font-size: 16px;
         height: max-content;
+        padding-inline: 1rem;
+        text-align: justify;
     }
 
     .details img {
