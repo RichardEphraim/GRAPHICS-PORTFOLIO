@@ -248,7 +248,7 @@ body{
     .details{
         position: relative;
         z-index: 5;
-        height: 200vh;
+        height: max-content;
         margin: 0;
         color: white;
         font-size: 18px;
@@ -285,9 +285,10 @@ body{
         cursor: pointer;
     }
     .m-details{
-        height: 15rem;
+        height: max-content;
         position: relative;
         z-index: 5;
+        margin-bottom: 2rem;
     }
     .name-tag-footer{
         position:relative;
@@ -450,7 +451,7 @@ body{
     .details {
         padding: 2rem;
         font-size: 16px;
-        height: 155rem;
+        height: max-content;
     }
 
     .details img {
@@ -460,7 +461,7 @@ body{
         margin: 2rem 0;
     }
     .m-details{
-        height: max-content;
+        height:max-content;
     }
 
     .m-details p {
@@ -507,11 +508,15 @@ body{
     .details {
         padding: 4rem;
         font-size: 17px;
+        height: min-content;
     }
 
     .details img {
         width: 50%;
         height: auto;
+    }
+    .m-details{
+        height: max-content;
     }
 
     .btn-container button {
