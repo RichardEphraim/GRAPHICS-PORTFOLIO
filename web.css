@@ -460,7 +460,7 @@ body{
         margin: 2rem 0;
     }
     .m-details{
-        height: 18rem;
+        height: max-content;
     }
 
     .m-details p {
