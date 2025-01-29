@@ -402,3 +402,125 @@ body{
             font-size: 1.4rem;
         }
     }
+
+
+    /* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .name-tag h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .name-tag h3 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    .intro-head{
+        margin-top: 4rem;
+        height: 7rem;
+    }
+
+    .intro-head h2 {
+        font-size: 2rem;
+    }
+
+    .intro-head h3 {
+        font-size: 2rem;
+    }
+
+    .slideshow {
+        height: 50rem;
+
+    }
+
+    .slideshow-item-text {
+        max-width: 90%;
+        padding: 1rem;
+        bottom: 0;
+        top: auto;
+        transform: initial;
+    }
+
+    .details {
+        padding: 2rem;
+        font-size: 16px;
+        height: max-content;
+        padding-inline: 1rem;
+        text-align: justify;
+    }
+
+    .details img {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 2rem 0;
+    }
+    .m-details{
+        height:max-content;
+    }
+
+    .m-details p {
+        margin: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+
+    .icon i {
+        font-size: 1.5rem;
+    }
+
+    .btn-container button {
+        width: 10rem;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
+    .name-tag-footer{
+        font-size: 14px;
+    }
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .name-tag h2 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .name-tag h3 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    .intro-head h2 {
+        font-size: 4rem;
+    }
+
+    .intro-head h3 {
+        font-size: 2.5rem;
+    }
+
+    .slideshow {
+        height: 80vh;
+    }
+
+    .details {
+        padding: 4rem;
+        font-size: 17px;
+        height: min-content;
+    }
+
+    .details img {
+        width: 50%;
+        height: auto;
+    }
+    .m-details{
+        height: max-content;
+    }
+
+    .btn-container button {
+        width: 12rem;
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+}
+
