@@ -96,8 +96,10 @@ body{
 
     .slideshow-item{ 
         width: 100%;
-        height: 80vh;
+        height: 90vh;
         position: absolute;
+        display: flex;
+       justify-content: center;
         opacity: 0;
         animation: cycleImages 31s infinite;
         pointer-events: none;
@@ -110,9 +112,9 @@ body{
     }
 
     .slideshow-item img{ 
-        width: 100%;
+        width: 90%;
         height: 100%;
-        object-fit: cover;
+        object-fit:fill;
         animation: zoom 31s infinite;
     }
 
@@ -182,6 +184,7 @@ body{
     .image-modal {
         display: none; /* Hide the modal by default */
         position: fixed;
+    border: white 2px solid;
         top: 0;
         left: 0;
         width: 100%;
@@ -190,7 +193,6 @@ body{
         justify-content: center;
         align-items: center;
         z-index: 1000; /* Make sure it's on top */
-        border: 2px solid green;
     }
 
     /* .modal-content {
@@ -209,7 +211,7 @@ body{
     } */
 
     .modal-content img {
-        max-width: 50%;
+        max-width: 70%;
         display: block;
         margin: auto;
     }
@@ -484,6 +486,46 @@ body{
     .name-tag-footer{
         font-size: 14px;
     }
+    .modal-nav{
+        font-size: 2rem;
+        padding: 2px;
+        margin: 0;
+    }
+    .modal-content{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .modal-content img{
+        width: 100rem;
+        object-fit: fill;
+        height: 15rem;
+    }
+    .modal-nav.next{
+        right: 5px;
+    }
+    .modal-nav.prev{
+        left: 5px;
+    }
+    
+    
+    
+    
+    .slideshow-item{
+        height: 30rem;
+    }
+
+
+    .slideshow-item img{
+        height: 50%;
+        margin: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .slideshow{
+        height: 33rem;
+
+    } 
 }
 
 /* Tablet Styles (768px - 1024px) */
