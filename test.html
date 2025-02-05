@@ -1,106 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invisible Outline Div</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(to right, #f3e5ab, #ffb6c1);
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    /* Div with completely removed outline */
-    .no-outline {
-      width: 200px;
-      height: 100px;
-      outline: none;
-      background: #ff7f50;
-      border-radius: 10px;
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-
-    /* Div with outline matching the background */
-    .match-bg-outline {
-      width: 200px;
-      height: 100px;
-      background: #87ceeb;
-      outline: 2px solid #f3e5ab; /* Matches the body background */
-      border-radius: 10px;
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-
-    /* Div with transparent outline */
-    .transparent-outline {
-      width: 200px;
-      height: 100px;
-      background: #9370db;
-      outline: 2px solid transparent;
-      border-radius: 10px;
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-
-    /* Div with gradient background matching the outline */
-    .gradient-outline {
-      width: 200px;
-      height: 100px;
-      background: linear-gradient(to right, #ff4500, #ff6347);
-      border-radius: 10px;
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-
-    /* Div with shadow instead of outline */
-    .shadow-effect {
-      width: 200px;
-      height: 100px;
-      background: #32cd32;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-
-    /* Div with pushed-out outline */
-    .offset-outline {
-      width: 200px;
-      height: 100px;
-      background: #1e90ff;
-      outline: 2px solid black;
-      outline-offset: -9999px; /* Pushes outline out of view */
-      border-radius: 10px;
-      color: white;
-      line-height: 100px;
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .image-modal img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .close-modal, .modal-nav {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .close-modal { top: 20px; right: 20px; }
+        .modal-nav.prev { left: 20px; top: 50%; transform: translateY(-50%); }
+        .modal-nav.next { right: 20px; top: 50%; transform: translateY(-50%); }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="no-outline">No Outline</div>
-    <div class="match-bg-outline">Match BG Outline</div>
-    <div class="transparent-outline">Transparent Outline</div>
-    <div class="gradient-outline">Gradient BG</div>
-    <div class="shadow-effect">Shadow Effect</div>
-    <div class="offset-outline">Offset Outline</div>
-  </div>
+    <div class="gallery">
+        <div class="slideshow-item"><img src="images/web/BIBLE MOCK UP.jpg" alt="Gallery Image" class="view-image-btn"></div>
+        <div class="slideshow-item"><img src="images/web/WEDDING MOCKUP.jpg" alt="Gallery Image" class="view-image-btn"></div>
+        <div class="slideshow-item"><img src="images/web/INSURE MOCKUP.jpg" alt="Gallery Image" class="view-image-btn"></div>
+        <div class="slideshow-item"><img src="images/web/TODO MOCKUP.jpg" alt="Gallery Image" class="view-image-btn"></div>
+    </div>
+    
+    <div class="image-modal">
+        <span class="close-modal">&times;</span>
+        <span class="modal-nav prev">&#10094;</span>
+        <div class="modal-content"></div>
+        <span class="modal-nav next">&#10095;</span>
+    </div>
+    
+    <script>
+        const viewImageButtons = document.querySelectorAll('.view-image-btn');
+        const modal = document.querySelector('.image-modal');
+        const modalContent = modal.querySelector('.modal-content');
+        const closeModal = modal.querySelector('.close-modal');
+        const prevButton = modal.querySelector('.prev');
+        const nextButton = modal.querySelector('.next');
+        const slideshowItems = document.querySelectorAll('.slideshow-item');
+        
+        let currentIndex = 0;
+
+        viewImageButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentIndex = index;
+                openModal();
+            });
+        });
+
+        function openModal() {
+            showImage();
+            modal.style.display = 'flex';
+        }
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        function showImage() {
+            const currentImage = slideshowItems[currentIndex].querySelector('img').src;
+            modalContent.innerHTML = `<img src="${currentImage}" alt="Slide ${currentIndex + 1}" />`;
+        }
+
+        prevButton.addEventListener('click', () => navigateImage(-1));
+        nextButton.addEventListener('click', () => navigateImage(1));
+
+        function navigateImage(direction) {
+            currentIndex = (currentIndex + direction + slideshowItems.length) % slideshowItems.length;
+            showImage();
+        }
+    </script>
 </body>
 </html>

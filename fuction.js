@@ -6,6 +6,8 @@ const closeModal = modal.querySelector('.close-modal');
 const prevButton = modal.querySelector('.modal-nav.prev');
 const nextButton = modal.querySelector('.modal-nav.next');
 const slideshowItems = document.querySelectorAll('.slideshow-item');
+const rotateImg = document.querySelector('.modal-rotate')
+const dopePo = document.querySelectorAll('.modal-content')
 
 let currentIndex = 0;
 
@@ -45,3 +47,17 @@ function navigateImage(direction) {
     currentIndex = (currentIndex + direction + slideshowItems.length) % slideshowItems.length;
     showImage();
 }
+
+let isRotated = false; // Track rotation state
+
+document.addEventListener('dblclick', () => {
+    dopePo.forEach((img) => {
+        if (isRotated) {
+            img.style.transform = 'scale(1) rotate(0deg)'; // Reset to normal
+        } else {
+            img.style.transform = 'scale(1.5) rotate(90deg)'; // Enlarge and rotate
+        }
+    });
+
+    isRotated = !isRotated;
+});
